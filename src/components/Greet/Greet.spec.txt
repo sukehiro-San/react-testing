@@ -1,0 +1,16 @@
+import { render, screen } from "@testing-library/react";
+import Greet from "./Greet";
+
+describe("Greet", () => {
+  it("Greet renders correctly", () => {
+    render(<Greet />);
+    const textEl = screen.getByText("Hello");
+    expect(textEl).toBeInTheDocument();
+  });
+
+  it("Greet renders with a name", () => {
+    render(<Greet name="Sunny" />);
+    let textEl = screen.getByText("Hello Sunny");
+    expect(textEl).toBeInTheDocument();
+  });
+});
