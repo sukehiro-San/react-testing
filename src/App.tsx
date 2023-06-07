@@ -1,18 +1,18 @@
 import MuiMode from "./components/mui/Mui-mode";
+import Users from "./components/users/Users";
 import AppProvider from "./providers/App.provider";
 
 const App = () => {
-  return (
-    <AppProvider>
-      <div className="App">
-        <MuiMode />
-      </div>
-    </AppProvider>
-  );
+  return <Users />;
 };
 
 export default App;
 
+// <AppProvider>
+//   <div className="App">
+//     <MuiMode />
+//   </div>
+// </AppProvider>
 // import { useState } from "react";
 // import Todos from "./components/Todos/Todos";
 
