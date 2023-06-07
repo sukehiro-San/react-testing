@@ -12,3 +12,9 @@
   console.log("result.current.propNameInCustomHook")
   // will return the property value
   ```
+
+- Also as we talk about customHooks testing we might also face a scenario when we need to test a function property of the custom hook. As we know that the render & test method by itself wrap any user interaction in the act utiliy for any React Component testing but this is not the case in terms of custom hooks testing. We need to manually invoke and wrap hook property functions in the act utility as shown below:
+
+```js
+act(() => result.current.functionPropertyInCustomHook(...args));
+```
